@@ -1,6 +1,10 @@
 import http from 'http';
 import url from 'url';
 
+export const config = {
+    runtime: 'edge', // 指定函数的运行时
+};
+
 export default async (req, res) => {
     const { query, body, headers } = req;
 
