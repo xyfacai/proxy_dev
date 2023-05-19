@@ -24,7 +24,7 @@ export default async function handleRequest(req: Request & { nextUrl?: URL }) {
     });
   }
 
-  const { pathname } = req.url.split('proxy/')[1];
+  const  pathname  = req.url.split('proxy/')[1];
 /*  const { pathname, search } = req.nextUrl ? req.nextUrl : new URL(req.url);
   const url = new URL(pathname + search, "https://api.openai.com").href;
   const headers = pickHeaders(req.headers, ["content-type", "authorization"]);*/
