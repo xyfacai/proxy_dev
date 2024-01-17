@@ -29,6 +29,7 @@ export default async function handleRequest(req: Request & { nextUrl?: URL }) {
   const url = new URL(pathname + search, "https://api.openai.com").href;
   const headers = pickHeaders(req.headers, ["content-type", "authorization"]);*/
 
+  console.log("url", pathname, "header", req.headers, "method", req.method)
   const res = await fetch(`https://${pathname}`, {
     body: req.body,
     method: req.method,
