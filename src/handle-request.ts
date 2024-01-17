@@ -36,9 +36,9 @@ export default async function handleRequest(req: Request & { nextUrl?: URL }) {
   });
 
   const resHeaders = {
-    ...CORS_HEADERS,
+    //...CORS_HEADERS,
     ...Object.fromEntries(
-      pickHeaders(res.headers, ["content-type", /^x-ratelimit-/, /^openai-/])
+      res.headers
     ),
   };
 
