@@ -30,7 +30,7 @@ export default async function handleRequest(req: Request & { nextUrl?: URL }) {
   const headers = pickHeaders(req.headers, ["content-type", "authorization"]);*/
 
   console.log("url", pathname, "header", req.headers, "method", req.method)
-  const res = await fetch(`https://${pathname}`, {
+  const res = await fetch(pathname, {
     body: req.body,
     method: req.method,
     headers: req.headers,
